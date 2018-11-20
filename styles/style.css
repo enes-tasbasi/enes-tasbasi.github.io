@@ -87,6 +87,10 @@ nav .header-container {
   justify-content: center;
 }
 
+nav .header-container:hover {
+  animation: pulsate 800ms linear;
+}
+
 nav i.fa {
   font-size: 50px;
   float: right;
@@ -328,11 +332,11 @@ nav ul li a:hover::before {
 }
 
 .social-container a:hover {
-  animation: shake 800ms linear infinite;
-  -moz-animation: shake 1s infinite;
+  animation: spin 800ms linear;
+  -moz-animation: fold 800ms linear;
 }
 
-@keyframes shake {
+/* @keyframes shake {
   0% {
     transform: rotate(0deg);
   }
@@ -354,7 +358,7 @@ nav ul li a:hover::before {
   100% {
     transform: rotate(0deg);
   }
-}
+} */
 
 .social-container i.fa-github-square {
   color: #212121;
@@ -374,18 +378,14 @@ nav ul li a:hover::before {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .social-container i.fa-codepen {
   color: black;
 }
-
 .social > a {
   display: block;
   margin: 20px 0 10px 20px;
 }
-
 /* == footer == */
-
 .footer {
   height: 500px;
   width: 100%;
@@ -397,45 +397,36 @@ nav ul li a:hover::before {
   flex-direction: column;
   justify-content: center;
 }
-
 .footer div,
 .footer .fa {
   width: fit-content;
   margin: auto;
 }
-
 .footer .arrow-up-container {
   transition: all 1s ease-in-out;
   width: fit-content;
   height: fit-content;
 }
-
 .footer .arrow-up-container i {
   font-size: 80px;
 }
-
 @media screen and (max-width: 760px) {
   .header-image {
     display: none;
   }
-
   nav {
     margin-top: 0;
     height: 90px;
   }
-
   nav .header-container {
     margin: 20px 6%;
   }
-
   nav .header-container h2 {
     font-size: 16px;
   }
-
   nav ul li {
     font-size: 16px;
   }
-
   .about,
   .skillset,
   .projects,
