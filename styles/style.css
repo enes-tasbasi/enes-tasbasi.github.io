@@ -12,11 +12,7 @@ body {
   font-size: 20px;
 }
 
-.about,
-.skillset,
-.projects,
-.social {
-  float: left;
+.container {
   margin: 40px 10%;
 }
 
@@ -239,7 +235,7 @@ nav ul li a:hover::before {
   top: calc(50% - 18px);
   opacity: 0.2;
   display: block;
-  content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnIGlkPSJwaG90b18xXyI+PHBhdGggZD0iTTI3LDBINUMyLjc5MSwwLDEsMS43OTEsMSw0djI0YzAsMi4yMDksMS43OTEsNCw0LDRoMjJjMi4yMDksMCw0LTEuNzkxLDQtNFY0QzMxLDEuNzkxLDI5LjIwOSwwLDI3LDB6ICAgIE0yOSwyOGMwLDEuMTAyLTAuODk4LDItMiwySDVjLTEuMTAzLDAtMi0wLjg5OC0yLTJWNGMwLTEuMTAzLDAuODk3LTIsMi0yaDIyYzEuMTAyLDAsMiwwLjg5NywyLDJWMjh6IiBmaWxsPSIjMzMzMzMzIi8+PHBhdGggZD0iTTI2LDRINkM1LjQ0Nyw0LDUsNC40NDcsNSw1djE4YzAsMC41NTMsMC40NDcsMSwxLDFoMjBjMC41NTMsMCwxLTAuNDQ3LDEtMVY1QzI3LDQuNDQ3LDI2LjU1Myw0LDI2LDR6ICAgIE0yNiw1djEzLjg2OWwtMy4yNS0zLjUzQzIyLjU1OSwxNS4xMjMsMjIuMjg3LDE1LDIyLDE1cy0wLjU2MSwwLjEyMy0wLjc1LDAuMzM5bC0yLjYwNCwyLjk1bC03Ljg5Ni04Ljk1ICAgQzEwLjU2LDkuMTIzLDEwLjI4Nyw5LDEwLDlTOS40NCw5LjEyMyw5LjI1LDkuMzM5TDYsMTMuMDg3VjVIMjZ6IE02LDE0LjZsNC00LjZsOC4wNjYsOS4xNDNsMC41OCwwLjY1OEwyMS40MDgsMjNINlYxNC42eiAgICBNMjIuNzQsMjNsLTMuNDI4LTMuOTU1TDIyLDE2bDQsNC4zNzlWMjNIMjIuNzR6IiBmaWxsPSIjMzMzMzMzIi8+PHBhdGggZD0iTTIwLDEzYzEuNjU2LDAsMy0xLjM0MywzLTNzLTEuMzQ0LTMtMy0zYy0xLjY1OCwwLTMsMS4zNDMtMywzUzE4LjM0MiwxMywyMCwxM3ogTTIwLDhjMS4xMDIsMCwyLDAuODk3LDIsMiAgIHMtMC44OTgsMi0yLDJjLTEuMTA0LDAtMi0wLjg5Ny0yLTJTMTguODk2LDgsMjAsOHoiIGZpbGw9IiMzMzMzMzMiLz48L2c+PC9zdmc+");
+  /* content: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxnIGlkPSJwaG90b18xXyI+PHBhdGggZD0iTTI3LDBINUMyLjc5MSwwLDEsMS43OTEsMSw0djI0YzAsMi4yMDksMS43OTEsNCw0LDRoMjJjMi4yMDksMCw0LTEuNzkxLDQtNFY0QzMxLDEuNzkxLDI5LjIwOSwwLDI3LDB6ICAgIE0yOSwyOGMwLDEuMTAyLTAuODk4LDItMiwySDVjLTEuMTAzLDAtMi0wLjg5OC0yLTJWNGMwLTEuMTAzLDAuODk3LTIsMi0yaDIyYzEuMTAyLDAsMiwwLjg5NywyLDJWMjh6IiBmaWxsPSIjMzMzMzMzIi8+PHBhdGggZD0iTTI2LDRINkM1LjQ0Nyw0LDUsNC40NDcsNSw1djE4YzAsMC41NTMsMC40NDcsMSwxLDFoMjBjMC41NTMsMCwxLTAuNDQ3LDEtMVY1QzI3LDQuNDQ3LDI2LjU1Myw0LDI2LDR6ICAgIE0yNiw1djEzLjg2OWwtMy4yNS0zLjUzQzIyLjU1OSwxNS4xMjMsMjIuMjg3LDE1LDIyLDE1cy0wLjU2MSwwLjEyMy0wLjc1LDAuMzM5bC0yLjYwNCwyLjk1bC03Ljg5Ni04Ljk1ICAgQzEwLjU2LDkuMTIzLDEwLjI4Nyw5LDEwLDlTOS40NCw5LjEyMyw5LjI1LDkuMzM5TDYsMTMuMDg3VjVIMjZ6IE02LDE0LjZsNC00LjZsOC4wNjYsOS4xNDNsMC41OCwwLjY1OEwyMS40MDgsMjNINlYxNC42eiAgICBNMjIuNzQsMjNsLTMuNDI4LTMuOTU1TDIyLDE2bDQsNC4zNzlWMjNIMjIuNzR6IiBmaWxsPSIjMzMzMzMzIi8+PHBhdGggZD0iTTIwLDEzYzEuNjU2LDAsMy0xLjM0MywzLTNzLTEuMzQ0LTMtMy0zYy0xLjY1OCwwLTMsMS4zNDMtMywzUzE4LjM0MiwxMywyMCwxM3ogTTIwLDhjMS4xMDIsMCwyLDAuODk3LDIsMiAgIHMtMC44OTgsMi0yLDJjLTEuMTA0LDAtMi0wLjg5Ny0yLTJTMTguODk2LDgsMjAsOHoiIGZpbGw9IiMzMzMzMzMiLz48L2c+PC9zdmc+"); */
 }
 /* This is a masking container for the zoomed iframe element */
 .thumbnail {
@@ -279,7 +275,7 @@ nav ul li a:hover::before {
   width: 100%;
   height: 0;
   bottom: 0;
-  background-color: #d3c4d1;
+  background-color: #ff729f;
   box-sizing: border-box;
   transition: all 100ms ease-in-out;
 }
@@ -293,12 +289,17 @@ nav ul li a:hover::before {
 
 /* assign description to each project depending on the attr siteName */
 
+.thumbnail[siteName="lang-talk"]::before {
+  content: "MERN web application with Express for back-end, React, Redux, and React-Router for frontend";
+  font-size: 4em;
+}
+
 .thumbnail[siteName="express"]::before {
   content: "Dynamic web app made using ExpressJs, MongoDB, and Handlebars";
 }
 
 .thumbnail[siteName="current"]::before {
-  content: "Static, responsive site made with jekyll";
+  content: "Simple one-page website with just HTML, CSS, and JQuery";
 }
 
 .thumbnail[siteName="planets"]::before {
@@ -311,6 +312,58 @@ nav ul li a:hover::before {
 
 .thumbnail[siteName="chess"]::before {
   content: "Interactive chess board made with React";
+}
+
+/* === github === */
+
+.github ul {
+  margin-top: 10px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 1em;
+}
+
+.github ul li {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid #56cbf9;
+}
+
+.github ul li a {
+  text-decoration: none;
+  float: left;
+}
+
+.github ul li i.icon {
+  color: #d14160;
+  margin: 0 10px;
+  font-size: 1.2em;
+}
+
+.github ul li .repo-stats {
+  float: right;
+  font-size: 0.8em;
+}
+
+.github ul li .repo-stats span {
+  padding: 4px 6px;
+  margin: 1px;
+  border-radius: 2px;
+}
+
+.github ul li .repo-stats span.watchers {
+  background-color: #00d0f7;
+}
+
+.github ul li .repo-stats span.stars {
+  background-color: #e96227;
+}
+
+.github ul li .repo-stats span.forks {
+  background-color: aquamarine;
 }
 
 /* === social === */
@@ -332,33 +385,34 @@ nav ul li a:hover::before {
 }
 
 .social-container a:hover {
-  animation: spin 800ms linear;
-  -moz-animation: fold 800ms linear;
+  animation: spin 600ms linear;
+  -moz-animation: fold 600ms linear;
 }
 
-/* @keyframes shake {
-  0% {
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
     transform: rotate(0deg);
   }
-  10% {
-    transform: rotate(12deg);
+  to {
+    transform: rotate(360deg);
   }
-  20% {
-    transform: rotate(15deg);
-  }
-  40% {
-    transform: rotate(5deg);
-  }
-  60% {
-    transform: rotate(-5deg);
-  }
-  80% {
-    transform: rotate(-15deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-} */
+}
 
 .social-container i.fa-github-square {
   color: #212121;
@@ -433,5 +487,14 @@ nav ul li a:hover::before {
   .social {
     float: left;
     margin: 40px 6%;
+  }
+  .github ul .repo-stats {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .github ul {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 100px);
   }
 }
