@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-131754556-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-131754556-2");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -25,6 +39,11 @@
       <ul>
         <li><a id="about">About</a></li>
         <li><a id="projects">Projects</a></li>
+        <li>
+          <a target="__blank" href="https://etasbasi.github.io/Blog/"
+            >Blog <i class="fas fa-external-link-alt"></i>
+          </a>
+        </li>
       </ul>
     </nav>
 
@@ -61,6 +80,14 @@
             <img src="img/lang-talk-snapshot.PNG" alt="article site" />
           </div>
         </a>
+        <a
+          target="_blank"
+          href="https://etasbasi.github.io/simple-grapher/dist/"
+        >
+          <div siteName="simple-grapher" class="img-container">
+            <img src="img/simple-grapher-snapshot.PNG" alt="article site" />
+          </div>
+        </a>
         <a target="_blank" href="https://ancient-depths-92713.herokuapp.com/">
           <div siteName="express" class="img-container">
             <img src="img/article-snapshot.PNG" alt="article site" /></div
@@ -91,81 +118,6 @@
             <img src="img/chess-snapshot.PNG" alt="Chess app" />
           </div>
         </a>
-
-        <!-- <a target="_blank" href="https://floating-waters-33077.herokuapp.com/">
-          <div class=" thumbnail-container">
-            <div siteName="lang-talk" class="thumbnail">
-              <iframe
-                src="https://floating-waters-33077.herokuapp.com/"
-                frameborder="0"
-                onload="this.style.opacity = 1"
-              >
-              </iframe>
-            </div>
-          </div>
-        </a>
-        <a target="_blank" href="https://ancient-depths-92713.herokuapp.com/">
-          <div class=" thumbnail-container">
-            <div siteName="express" class="thumbnail">
-              <iframe
-                src="https://ancient-depths-92713.herokuapp.com/"
-                frameborder="0"
-                onload="this.style.opacity = 1"
-              >
-              </iframe>
-            </div>
-          </div>
-        </a>
-        <a target="_blank" href="https://etasbasi.github.io/">
-          <div class="thumbnail-container">
-            <div siteName="current" class="thumbnail">
-              <iframe
-                src="https://etasbasi.github.io/"
-                frameborder="0"
-                onload="this.style.opacity = 1"
-              ></iframe>
-            </div>
-          </div>
-        </a>
-        <a
-          target="_blank"
-          href="https://etasbasi.github.io/planets-of-the-universe/"
-        >
-          <div class="thumbnail-container">
-            <div siteName="planets" class="thumbnail">
-              <iframe
-                src="https://etasbasi.github.io/planets-of-the-universe/"
-                frameborder="0"
-                onload="this.style.opacity = 1"
-              ></iframe>
-            </div>
-          </div>
-        </a>
-        <a
-          target="_blank"
-          href="https://etasbasi.github.io/firebase-shopping-list/"
-        >
-          <div class=" thumbnail-container">
-            <div siteName="firebase" class="thumbnail">
-              <iframe
-                src="https://etasbasi.github.io/firebase-shopping-list/"
-                frameborder="0"
-                onload="this.style.opacity = 1"
-              ></iframe>
-            </div>
-          </div>
-        </a>
-        <a target="_blank" href="https://etasbasi.github.io/Chess">
-          <div class=" thumbnail-container">
-            <div siteName="chess" class="thumbnail">
-              <iframe
-                src="https://etasbasi.github.io/Chess"
-                frameborder="0"
-                onload="this.style.opacity = 1"
-              ></iframe>
-            </div>
-          </div>
-        </a> -->
       </div>
     </div>
 
@@ -193,7 +145,7 @@
           ><i class="fab fa-codepen" aria-hidden="true"></i
         ></a>
       </div>
-      <a href="mailto:enestasbasi@outlook.com">Contact Me</a>
+      <a class="contact" href="mailto:enestasbasi@outlook.com">Email Me</a>
     </div>
 
     <div class="footer">
