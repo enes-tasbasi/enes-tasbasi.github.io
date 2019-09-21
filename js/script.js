@@ -39,7 +39,8 @@ function createListElement({
   stargazers_count,
   watchers_count,
   forks_count,
-  language
+  language,
+  description
 }) {
   language = language.toLowerCase();
   let icon;
@@ -61,23 +62,19 @@ function createListElement({
       break;
   }
   listElements += `<li>
-      <a href="${html_url}" target="__blank">${name}</a>
-      <span><i class="icon ${icon}"></i></span>
-      <div class="repo-stats">
-        <span class="watchers">Watchers: ${watchers_count}</span>
-        <span class="stars">Stars: ${stargazers_count}</span>
-        <span class="forks">Forks: ${forks_count}</span>
-      </div>
-    </li>`;
+    <a href="${html_url}" target="__blank">${name}</a>
+    <span><i class="icon ${icon}"></i></span>
+    ${description ? `<div class="description">${description}</div>` : ""}
+</li>`;
 }
 
 $("document").ready(function() {
   fetch(
     `https://api.github.com/users/${username}/repos?per_page=${count}&sort=${sort}&client_id=${clientId}&client_secret=${clientSecret}`
   )
-    .then(res => res.json())
-    .then(data => {
-      data.map(val => createListElement(val));
+    .then((res) => res.json())
+    .then((data) => {
+      data.map((val) => createListElement(val));
       document.getElementById("github-list").innerHTML = listElements;
     });
 });
