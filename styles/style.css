@@ -277,6 +277,10 @@ nav ul li a:hover::before {
   content: "Interactive chess board made with React";
 }
 
+.img-container[siteName="geornal"]::before {
+  content: "Open source project that lets people share their adventures";
+}
+
 /* === github === */
 
 .github ul {
@@ -367,16 +371,6 @@ nav ul li a:hover::before {
   color: #0073af;
 }
 
-.social-container i.fa-instagram {
-  background: -webkit-linear-gradient(
-    45deg,
-    #f7c263 1%,
-    #d42d79 73%,
-    #d42d79 98%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 .social-container i.fa-codepen {
   color: black;
 }
@@ -441,9 +435,7 @@ nav ul li a:hover::before {
   .social {
     margin: 40px 6%;
   }
-  /* .project-examples {
-    grid-template-columns: 1fr 1fr;
-  } */
+
   .github ul .repo-stats {
     margin-top: 10px;
   }

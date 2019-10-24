@@ -33,15 +33,7 @@ const clientSecret = "7991e22ba6d74351a0427ed27cbdc218e068c6d4";
 
 let listElements = "";
 
-function createListElement({
-  name,
-  html_url,
-  stargazers_count,
-  watchers_count,
-  forks_count,
-  language,
-  description
-}) {
+function createListElement({ name, html_url, language, description }) {
   language = language.toLowerCase();
   let icon;
   switch (language) {
@@ -66,6 +58,7 @@ function createListElement({
     <span><i class="icon ${icon}"></i></span>
     ${description ? `<div class="description">${description}</div>` : ""}
 </li>`;
+  console.log(listElements);
 }
 
 $("document").ready(function() {
@@ -74,7 +67,10 @@ $("document").ready(function() {
   )
     .then((res) => res.json())
     .then((data) => {
-      data.map((val) => createListElement(val));
+      console.log(data);
+      let mapped = data.map((val) => createListElement(val));
+      console.log(mapped);
       document.getElementById("github-list").innerHTML = listElements;
-    });
+    })
+    .catch((err) => console.log(err));
 });
