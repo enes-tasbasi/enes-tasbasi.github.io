@@ -56,7 +56,7 @@ h3:hover::after {
 
 /* === NavBar === */
 
-nav {
+.header {
   height: 100px;
   margin-top: -100px;
   width: 100%;
@@ -70,7 +70,7 @@ nav {
   align-items: center;
 }
 
-nav .header-container {
+.header .header-container {
   justify-self: left;
   grid-area: header;
   float: left;
@@ -86,11 +86,11 @@ nav .header-container {
   justify-content: center;
 }
 
-nav .header-container:hover {
+.header .header-container:hover {
   animation: pulsate 800ms linear;
 }
 
-nav i.fa {
+.header i.fa {
   font-size: 50px;
   float: right;
   margin-top: 25px;
@@ -99,20 +99,20 @@ nav i.fa {
   display: none;
 }
 
-nav ul {
+.header ul {
   grid-area: nav;
   display: inline;
   margin-right: 10%;
   justify-self: right;
 }
 
-nav ul li {
+.header ul li {
   cursor: pointer;
   list-style-type: none;
   display: inline-block;
 }
 
-nav ul li a {
+.header ul li a {
   color: black;
   text-decoration: none;
   padding: 12px;
@@ -120,7 +120,7 @@ nav ul li a {
   text-transform: capitalize;
 }
 
-nav ul li a::before {
+.header ul li a::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -131,7 +131,7 @@ nav ul li a::before {
   transition: all 200ms ease-in;
 }
 
-nav ul li a:hover::before {
+.header ul li a:hover::before {
   top: 0;
   left: 0;
   width: 100%;
@@ -316,6 +316,11 @@ nav ul li a:hover::before {
   font-size: 0.8em;
 }
 
+.github .calendar {
+  background-color: #fff;
+  width: 100%;
+}
+
 /* === social === */
 
 .social-container {
@@ -417,17 +422,17 @@ nav ul li a:hover::before {
   .header-image {
     display: none;
   }
-  nav {
+  .header {
     margin-top: 0;
     height: 90px;
   }
-  nav .header-container {
+  .header .header-container {
     margin: 20px 6%;
   }
-  nav .header-container h2 {
+  .header .header-container h2 {
     font-size: 16px;
   }
-  nav ul li {
+  .header ul li {
     font-size: 11px;
   }
   .about,

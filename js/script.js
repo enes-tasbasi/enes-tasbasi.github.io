@@ -1,3 +1,4 @@
+
 $("#about").on("click", function() {
   $("html, body").animate(
     {
@@ -34,7 +35,7 @@ const clientSecret = "7991e22ba6d74351a0427ed27cbdc218e068c6d4";
 let listElements = "";
 
 function createListElement({ name, html_url, language, description }) {
-  language = language.toLowerCase();
+  language = language ? language.toLowerCase() : null;
   let icon;
   switch (language) {
     case "java":
@@ -58,7 +59,6 @@ function createListElement({ name, html_url, language, description }) {
     <span><i class="icon ${icon}"></i></span>
     ${description ? `<div class="description">${description}</div>` : ""}
 </li>`;
-  console.log(listElements);
 }
 
 $("document").ready(function() {
@@ -67,9 +67,7 @@ $("document").ready(function() {
   )
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
-      let mapped = data.map((val) => createListElement(val));
-      console.log(mapped);
+      data.map((val) => createListElement(val));
       document.getElementById("github-list").innerHTML = listElements;
     })
     .catch((err) => console.log(err));
