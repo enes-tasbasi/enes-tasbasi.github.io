@@ -72,3 +72,17 @@ $("document").ready(function() {
     })
     .catch((err) => console.log(err));
 });
+
+let imgs = document.querySelectorAll('.card .img-container img');
+let cards = document.querySelectorAll('.card');
+imgs.forEach((img, index) => {
+  let id = index;
+  cards[id].style.height = `${img.height}px`;
+});
+
+window.addEventListener('resize', () => {
+  imgs.forEach((img, index) => {
+    let id = index;
+    cards[id].style.height = `${img.height}px`;
+  })
+});
