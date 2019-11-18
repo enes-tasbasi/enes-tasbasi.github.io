@@ -219,6 +219,10 @@ h3:hover::after {
   margin-bottom: 20px;
 }
 
+.project-list {
+  position: relative;
+}
+
 .card {
   border-radius: 4px;
   display: block;
