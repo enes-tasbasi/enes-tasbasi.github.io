@@ -1,4 +1,3 @@
-
 $("#about").on("click", function() {
   $("html, body").animate(
     {
@@ -62,27 +61,27 @@ function createListElement({ name, html_url, language, description }) {
 }
 
 $("document").ready(function() {
-  fetch(
-    `https://api.github.com/users/${username}/repos?per_page=${count}&sort=${sort}&client_id=${clientId}&client_secret=${clientSecret}`
-  )
-    .then((res) => res.json())
-    .then((data) => {
-      data.map((val) => createListElement(val));
-      document.getElementById("github-list").innerHTML = listElements;
-    })
-    .catch((err) => console.log(err));
-});
-
-let imgs = document.querySelectorAll('.card .img-container img');
-let cards = document.querySelectorAll('.card');
-imgs.forEach((img, index) => {
-  let id = index;
-  cards[id].style.height = `${img.height}px`;
-});
-
-window.addEventListener('resize', () => {
+  let imgs = document.querySelectorAll(".card .img-container img");
+  let cards = document.querySelectorAll(".card");
   imgs.forEach((img, index) => {
     let id = index;
     cards[id].style.height = `${img.height}px`;
-  })
+  });
+
+  window.addEventListener("resize", () => {
+    imgs.forEach((img, index) => {
+      let id = index;
+      cards[id].style.height = `${img.height}px`;
+    });
+  });
+
+  fetch(
+    `https://api.github.com/users/${username}/repos?per_page=${count}&sort=${sort}&client_id=${clientId}&client_secret=${clientSecret}`
+  )
+    .then(res => res.json())
+    .then(data => {
+      data.map(val => createListElement(val));
+      document.getElementById("github-list").innerHTML = listElements;
+    })
+    .catch(err => console.log(err));
 });
