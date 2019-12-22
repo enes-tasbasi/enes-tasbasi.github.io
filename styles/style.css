@@ -544,6 +544,7 @@ h3:hover::after {
 
   .project-list .card {
     height: fit-content !important;
+    height: -moz-fit-content !important;
   }
 
   .card .info {
