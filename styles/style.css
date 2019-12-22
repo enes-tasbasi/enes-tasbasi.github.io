@@ -543,6 +543,7 @@ h3:hover::after {
   }
 
   .project-list .card {
+    display: table;
     height: fit-content !important;
     height: -moz-fit-content !important;
   }
