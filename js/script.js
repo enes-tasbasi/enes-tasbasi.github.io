@@ -69,10 +69,12 @@ $("document").ready(function() {
   });
 
   window.addEventListener("resize", () => {
-    imgs.forEach((img, index) => {
-      let id = index;
-      cards[id].style.height = `${img.height}px`;
-    });
+    if (window.innerWidth > 600) {
+      imgs.forEach((img, index) => {
+        let id = index;
+        cards[id].style.height = `${img.height}px`;
+      });
+    }
   });
 
   fetch(
