@@ -28,8 +28,6 @@ $(".footer .fa-arrow-up").on("click", function() {
 const username = "etasbasi";
 const count = 6;
 const sort = "created: asc";
-const clientId = "806f9806f13283d4d9c7";
-const clientSecret = "7991e22ba6d74351a0427ed27cbdc218e068c6d4";
 
 let listElements = "";
 
@@ -78,7 +76,7 @@ $("document").ready(function() {
   });
 
   fetch(
-    `https://api.github.com/users/${username}/repos?per_page=${count}&sort=${sort}&client_id=${clientId}&client_secret=${clientSecret}`
+    `https://api.github.com/users/${username}/repos?per_page=${count}&sort=${sort}`
   )
     .then(res => res.json())
     .then(data => {
