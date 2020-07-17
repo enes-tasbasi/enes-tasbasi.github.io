@@ -16,16 +16,16 @@
       gtag("config", "UA-131754556-2");
     </script>
 
-    <link rel='icon' href='img/icon.png' type='image/png'/ >
+    <link rel='icon' href='img/logo-transparent.png' type='image/png'/ >
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Enes Tasbasi</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Varela+Round"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/main.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
@@ -33,337 +33,24 @@
       crossorigin="anonymous"
     />
   </head>
-
   <body>
-    <div class="header-image"></div>
-    <nav class="header">
-      <div class="header-container"><h2>Enes Tasbasi</h2></div>
-      <ul>
-        <li><a id="about">About</a></li>
-        <li><a id="projects">Projects</a></li>
-        <li>
-          <a target="__blank" href="https://etasbasi.github.io/Blog/"
-            >Blog <i class="fas fa-external-link-alt"></i>
-          </a>
-        </li>
-      </ul>
+    <nav>
+      <div class="background">
+        <img src="img/nav-background-2.svg" class="bottom" alt="" />
+        <img src="img/nav-background-1.svg" class="top" alt="" />
+      </div>
+      <div class="nav-text">
+        <span class="nav-title">Enes Tasbasi</span>
+        <span class="right-links">
+          <span>Projects</span>
+          <span>Skills</span>
+          <span class="contact"
+            ><a href="/contact" class="button primary">Contact</a></span
+          >
+        </span>
+      </div>
     </nav>
 
-    <div class="container about">
-      <h3>About Me</h3>
-
-      <p>
-        Hello, I am Enes Tasbasi. A full-stack developer based in Virginia. I
-        like challenging myself and getting out of my comfort zone to learn new
-        technologies. You can contact me if you need a new developer in your
-        team. 😃
-      </p>
-      <p>
-        I recently won 3rd place at profhacks. Check it out at
-        <a target="__blank" href="https://www.profhacks.com/">profhacks.com</a>.
-        ( That's me second from the right :D )
-      </p>
-    </div>
-
-    <div class="container skillset">
-      <h3>Skillset</h3>
-
-      <div class="skillset-container">
-        <div title="html5"><i class="fab fa-html5"></i></div>
-        <div title="css3"><i class="fab fa-css3-alt"></i></div>
-        <div title="javascript"><i class="fab fa-js"></i></div>
-        <div title="ReactJS"><i class="fab fa-react"></i></div>
-        <div title="Redux">
-          <img
-            id="redux"
-            src="https://api.iconify.design/simple-icons:redux.svg?color=%237348B7"
-            alt=""
-          />
-        </div>
-        <div title="GraphQL">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/1/17/GraphQL_Logo.svg"
-            alt=""
-          />
-        </div>
-        <div title="NodeJS"><i class="fab fa-node"></i></div>
-        <div title="Java"><i class="fab fa-java"></i></div>
-        <div title="Android"><i class="fab fa-android"></i></div>
-        <div title="SQL"><img src="img/sql.png" alt="" /></div>
-        <div title="MongoDB">
-          <img id="mongodb" src="img/mongodb.png" alt="" />
-        </div>
-        <div title="Git"><img src="img/git.png" alt="" /></div>
-      </div>
-    </div>
-
-    <div class="container projects">
-      <h3>Projects</h3>
-
-      <div class="project-list">
-        <div id="1" class="card">
-          <div class="info">
-            <div class="info-section">
-              <h3 class="title">Lang Talk</h3>
-              <p class="description">
-                A social platform that helps people from all around the world
-                connect to share their cultures and languages.
-              </p>
-            </div>
-            <div class="info-section">
-              <span class="technologies"
-                ><span class="describe">Technologies used:</span>
-                <ul>
-                  <li>React</li>
-                  <li>Redux</li>
-                  <li>Express</li>
-                  <li>MongoDB</li>
-                </ul>
-              </span>
-            </div>
-            <div class="info-section">
-              <div class="my-role">
-                <span class="describe">My Role:</span> Built the entire app.
-              </div>
-            </div>
-            <div class="info-section">
-              <div class="github-url">
-                <img src="img/right-arrow.png" alt="" />
-                <a target="__blank" href="https://github.com/etasbasi/lang-talk"
-                  >Github Url</a
-                >
-              </div>
-              <div class="demo-button">
-                <img src="img/right-arrow.png" alt="" />
-                <a
-                  target="__blank"
-                  href="https://floating-waters-33077.herokuapp.com/"
-                  >Click to Open Demo</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="img-container">
-            <img id="1" src="img/lang-talk-snapshot.PNG" alt="" />
-          </div>
-        </div>
-
-        <div id="2" class="card">
-          <div class="info">
-            <div class="info-section">
-              <h3 class="title">Geornal</h3>
-              <p class="description">
-                A trip recording platform for people to share their adventures
-                and leave comments on places they have visited. Open source
-                project.
-              </p>
-            </div>
-            <div class="info-section">
-              <span class="technologies"
-                ><span class="describe">Technologies used:</span>
-                <ul>
-                  <li>React</li>
-                  <li>GraphQL</li>
-                  <li>MySql</li>
-                  <li>Sequelize</li>
-                  <li>AWS</li>
-                </ul>
-              </span>
-            </div>
-            <div class="info-section">
-              <div class="my-role">
-                <span class="describe">My Role:</span> Worked with a team of
-                developers
-              </div>
-            </div>
-            <div class="info-section">
-              <div class="github-url">
-                <img src="img/right-arrow.png" alt="" />
-                <a
-                  target="__blank"
-                  href="https://github.com/projectunic0rn/travel-map-ui/"
-                  >Github Url</a
-                >
-              </div>
-              <div class="demo-button">
-                <img src="img/right-arrow.png" alt="" />
-                <a target="__blank" href="http://geornal-map.herokuapp.com/"
-                  >Click to Open Demo</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="img-container">
-            <img id="2" src="img/geornal-snapshot.PNG" alt="" />
-          </div>
-        </div>
-
-        <div id="3" class="card">
-          <div class="info">
-            <div class="info-section">
-              <h3 class="title">FireScape</h3>
-              <p class="description">
-                A webapp that helps the victims of wildfires by giving them
-                information about wildfires and letting them set an alert
-                system.
-              </p>
-            </div>
-            <div class="info-section">
-              <span class="technologies"
-                ><span class="describe">Technologies used:</span>
-                <ul>
-                  <li>ReactJS</li>
-                  <li>Firebase</li>
-                  <li>MaterializeCSS</li>
-                  <li>Geolocation</li>
-                  <li>Google Maps API</li>
-                </ul>
-              </span>
-            </div>
-            <div class="info-section">
-              <div class="my-role">
-                <span class="describe">My Role:</span> Built the entire web app.
-              </div>
-            </div>
-            <div class="info-section">
-              <div class="github-url">
-                <img src="img/right-arrow.png" alt="" />
-                <a target="__blank" href="https://github.com/etasbasi/FireScape"
-                  >Github Url</a
-                >
-              </div>
-              <div class="demo-button">
-                <img src="img/right-arrow.png" alt="" />
-                <a target="__blank" href="https://firescape.tech/"
-                  >Click to Open Demo</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="img-container">
-            <img id="3" src="img/firescape-snapshot.PNG" alt="" />
-          </div>
-        </div>
-
-        <div id="4" class="card">
-          <div class="info">
-            <div class="info-section">
-              <h3 class="title">Simple-Grapher</h3>
-              <p class="description">
-                Graphing utility which is also built as an npm library.
-              </p>
-            </div>
-            <div class="info-section">
-              <span class="technologies"
-                ><span class="describe">Technologies used:</span>
-                <ul>
-                  <li>JavaScript</li>
-                </ul>
-              </span>
-            </div>
-            <div class="info-section">
-              <div class="my-role">
-                <span class="describe">My Role:</span> Built the entire app.
-              </div>
-            </div>
-            <div class="info-section">
-              <div class="github-url">
-                <img src="img/right-arrow.png" alt="" />
-                <a
-                  target="__blank"
-                  href="https://github.com/etasbasi/Simple-Grapher/"
-                  >Github Url</a
-                >
-              </div>
-              <div class="demo-button">
-                <img src="img/right-arrow.png" alt="" />
-                <a
-                  target="__blank"
-                  href="https://etasbasi.github.io/simple-grapher/dist/"
-                  >Click to Open Demo</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="img-container">
-            <img id="4" src="img/simple-grapher-snapshot.PNG" alt="" />
-          </div>
-        </div>
-
-        <div id="5" class="card">
-          <div class="info">
-            <div class="info-section">
-              <h3 class="title">Chess</h3>
-              <p class="description">
-                Interactive chess board
-              </p>
-            </div>
-            <div class="info-section">
-              <span class="technologies"
-                ><span class="describe">Technologies used:</span>
-                <ul>
-                  <li>React</li>
-                </ul>
-              </span>
-            </div>
-            <div class="info-section">
-              <div class="my-role">
-                <span class="describe">My Role:</span> Built the entire app.
-              </div>
-            </div>
-            <div class="info-section">
-              <div class="github-url">
-                <img src="img/right-arrow.png" alt="" />
-                <a target="__blank" href="https://github.com/etasbasi/Chess/"
-                  >Github Url</a
-                >
-              </div>
-              <div class="demo-button">
-                <img src="img/right-arrow.png" alt="" />
-                <a target="__blank" href="https://etasbasi.github.io/Chess/"
-                  >Click to Open Demo</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="img-container">
-            <img id="5" src="img/chess-snapshot.PNG" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container github">
-      <h3>Recent Github Repos</h3>
-      <ul id="github-list"></ul>
-    </div>
-
-    <div class="container social">
-      <h3>Social</h3>
-
-      <div class="social-container">
-        <a target="_blank" href="https://github.com/etasbasi"
-          ><i class="fab fa-github-square" aria-hidden="true"></i
-        ></a>
-        <a
-          target="_blank"
-          href="https://www.linkedin.com/in/enes-tasbasi-a9b411167/"
-          ><i class="fab fa-linkedin" aria-hidden="true"></i
-        ></a>
-        <a target="_blank" href="https://codepen.io/etasbasi/"
-          ><i class="fab fa-codepen" aria-hidden="true"></i
-        ></a>
-      </div>
-      <a class="contact" href="mailto:enestasbasi@outlook.com">Email Me</a>
-    </div>
-
-    <div class="footer">
-      <div><i class="fa fa-copyright" aria-hidden="true"></i> Enes Tasbasi</div>
-
-      <div class="arrow-up-container">
-        <i class="fa fa-arrow-up" aria-hidden="true"></i>
-      </div>
-    </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

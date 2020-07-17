@@ -1,0 +1,101 @@
+head,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+head a,
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button.primary {
+  background-color: #383d3b;
+  color: #9ceaef;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.button.primary:hover {
+  background-color: #b5ffe9;
+  color: #383d3b;
+  border: 1px solid #383d3b;
+  padding: 8px 11px;
+}
+
+nav {
+  position: relative;
+}
+
+nav .background {
+  z-index: -1;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  height: 110px;
+  width: 1400px;
+  margin: auto;
+}
+
+nav .background img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-user-drag: none;
+  height: inherit;
+  position: absolute;
+}
+
+nav .background img.bottom {
+  top: 20px;
+  right: 90px;
+}
+
+nav .nav-text {
+  position: relative;
+  top: 12px;
+  margin: auto;
+  max-width: 1000px;
+  font-family: "Open Sans", sans-serif;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: default;
+}
+
+nav .nav-text .nav-title {
+  font-family: Open Sans;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+nav .nav-text .right-links {
+  float: right;
+}
+
+nav .nav-text .right-links span {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+nav .nav-text .right-links span:not(.contact) {
+  padding: 10px 15px;
+}
+
+@media screen and (max-width: 800px) {
+  nav .background img.bottom {
+    top: 5px;
+  }
+}
