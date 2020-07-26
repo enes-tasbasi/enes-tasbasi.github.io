@@ -3,12 +3,17 @@ $secondary-color: #383d3b;
 $thirtiary-color: #9ceaef;
 $text-color: #eef0f2;
 
+// * {
+//   outline: 1px solid red;
+// }
+
 head,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
 
   a {
     text-decoration: none;
@@ -18,9 +23,8 @@ body {
 
 .container {
   margin: auto;
-
-  &.fluid {
-  }
+  max-width: 1000px;
+  padding: 0 40px;
 }
 
 .bg-section {
@@ -201,6 +205,98 @@ section.call-to-action-1 {
       text-align: center;
       span {
         font-size: 1.5em;
+      }
+    }
+  }
+}
+
+.showcase {
+  margin-top: 5em;
+}
+
+.skills {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .skill {
+    padding: 10px 20px;
+    background-color: $text-color;
+    border-radius: 20px;
+    display: flex;
+    flex: 1 3;
+    width: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-start;
+    flex-grow: 0;
+    gap: 10px;
+
+    i {
+      font-size: 22px;
+      &.fa-react {
+        color: #00a2fd;
+      }
+      &.fa-aws {
+        color: #e7a440;
+      }
+      &.fa-project-diagram {
+        color: #ff00c7;
+      }
+    }
+  }
+}
+
+.section-header-container {
+  width: fit-content;
+  h1.section-header {
+    margin-bottom: 5px;
+    font-size: 2em;
+    position: relative;
+    left: 30px;
+    font-family: "Open Sans", sans-serif;
+  }
+  .section-header-underline {
+    display: block;
+    width: 65px;
+    height: 14px;
+    background-color: $secondary-color;
+  }
+}
+
+section.projects {
+  .projects-container {
+    margin: 55px auto;
+
+    .project {
+      display: flex;
+      flex-direction: row;
+      flex: 3 2;
+
+      .project-image-container {
+        display: relative;
+        background-color: $text-color;
+        padding: 0 45px 0 45px;
+
+        img {
+          position: relative;
+          top: 30px;
+          filter: drop-shadow(2px 7px 10px rgba(0, 0, 0, 0.15));
+        }
+      }
+
+      .project-details {
+        margin: 0 0 0 50px;
+
+        .project-name {
+          font-size: 1.8em;
+          margin-top: 0;
+        }
+
+        .project-description {
+          font-size: 1.4em;
+        }
       }
     }
   }

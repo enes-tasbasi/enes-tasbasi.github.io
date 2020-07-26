@@ -2,8 +2,10 @@ head,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: "Rubik", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 head a,
@@ -14,6 +16,8 @@ body a {
 
 .container {
   margin: auto;
+  max-width: 1000px;
+  padding: 0 40px;
 }
 
 .bg-section {
@@ -204,4 +208,125 @@ section.call-to-action-1 div div.button {
   section.call-to-action-1 div span {
     font-size: 1.5em;
   }
+}
+
+.showcase {
+  margin-top: 5em;
+}
+
+.skills {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills .skill {
+  padding: 10px 20px;
+  background-color: #eef0f2;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 3;
+          flex: 1 3;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  gap: 10px;
+}
+
+.skills .skill i {
+  font-size: 22px;
+}
+
+.skills .skill i.fa-react {
+  color: #00a2fd;
+}
+
+.skills .skill i.fa-aws {
+  color: #e7a440;
+}
+
+.skills .skill i.fa-project-diagram {
+  color: #ff00c7;
+}
+
+.section-header-container {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.section-header-container h1.section-header {
+  margin-bottom: 5px;
+  font-size: 2em;
+  position: relative;
+  left: 30px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.section-header-container .section-header-underline {
+  display: block;
+  width: 65px;
+  height: 14px;
+  background-color: #383d3b;
+}
+
+section.projects .projects-container {
+  margin: 55px auto;
+}
+
+section.projects .projects-container .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 2;
+          flex: 3 2;
+}
+
+section.projects .projects-container .project .project-image-container {
+  display: relative;
+  background-color: #eef0f2;
+  padding: 0 45px 0 45px;
+}
+
+section.projects .projects-container .project .project-image-container img {
+  position: relative;
+  top: 30px;
+  -webkit-filter: drop-shadow(2px 7px 10px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(2px 7px 10px rgba(0, 0, 0, 0.15));
+}
+
+section.projects .projects-container .project .project-details {
+  margin: 0 0 0 50px;
+}
+
+section.projects .projects-container .project .project-details .project-name {
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+section.projects .projects-container .project .project-details .project-description {
+  font-size: 1.4em;
 }
