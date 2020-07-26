@@ -1,12 +1,14 @@
 $main-color: #b5ffe9;
 $secondary-color: #383d3b;
 $thirtiary-color: #9ceaef;
+$text-color: #eef0f2;
 
 head,
 body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: "Rubik", sans-serif;
 
   a {
     text-decoration: none;
@@ -14,8 +16,44 @@ body {
   }
 }
 
+.container {
+  margin: auto;
+
+  &.fluid {
+  }
+}
+
+.bg-section {
+  background-color: $secondary-color;
+  margin: 100px auto;
+  color: #fff;
+  height: 316px;
+  width: 120vw;
+  transform: rotate(-5deg) translateX(-50px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 109vw;
+
+  > * {
+    transform: rotate(5deg) translateX(-40px);
+  }
+
+  @media screen and (max-width: 720px) {
+    max-width: 120vw;
+
+    > * {
+      max-width: 95vw;
+      transform: rotate(5deg) translateX(0);
+    }
+  }
+}
+
 .button {
   &.primary {
+    margin: auto;
+    cursor: pointer;
+
     background-color: $secondary-color;
     color: $thirtiary-color;
     // padding: 8px 18px 10px 14px;
@@ -29,11 +67,23 @@ body {
       border: 1px solid $secondary-color;
       padding: 8px 11px;
     }
+
+    &.reverse {
+      color: $secondary-color;
+      background-color: $thirtiary-color;
+
+      &:hover {
+        background-color: $secondary-color;
+        color: $main-color;
+        border: 1px solid $main-color;
+      }
+    }
   }
 }
 
 nav {
   position: relative;
+  height: 180px;
 
   .background {
     z-index: -1;
@@ -84,6 +134,18 @@ nav {
 
         &:not(.contact) {
           padding: 10px 15px;
+
+          &:hover {
+            color: lighten($color: #000000, $amount: 50);
+          }
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        span {
+          &:not(.contact) {
+            display: none;
+          }
         }
       }
     }
@@ -95,6 +157,50 @@ nav {
         &.bottom {
           top: 5px;
         }
+      }
+    }
+  }
+}
+
+section.intro {
+  text-align: center;
+  span {
+    display: block;
+    margin: auto;
+    max-width: 600px;
+    line-height: 1.5;
+    font-size: 2em;
+  }
+
+  @media screen and (max-width: 600px) {
+    span {
+      font-size: 1.5em;
+      margin: 10px;
+    }
+  }
+}
+
+section.call-to-action-1 {
+  div {
+    span {
+      font-size: 2em;
+      color: $text-color;
+    }
+
+    div.button {
+      margin-top: 40px;
+      line-height: 57px;
+      height: 57px;
+      width: 235px;
+      font-size: 2em;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    div {
+      text-align: center;
+      span {
+        font-size: 1.5em;
       }
     }
   }

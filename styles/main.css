@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  font-family: "Rubik", sans-serif;
 }
 
 head a,
@@ -11,7 +12,49 @@ body a {
   color: inherit;
 }
 
+.container {
+  margin: auto;
+}
+
+.bg-section {
+  background-color: #383d3b;
+  margin: 100px auto;
+  color: #fff;
+  height: 316px;
+  width: 120vw;
+  -webkit-transform: rotate(-5deg) translateX(-50px);
+          transform: rotate(-5deg) translateX(-50px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 109vw;
+}
+
+.bg-section > * {
+  -webkit-transform: rotate(5deg) translateX(-40px);
+          transform: rotate(5deg) translateX(-40px);
+}
+
+@media screen and (max-width: 720px) {
+  .bg-section {
+    max-width: 120vw;
+  }
+  .bg-section > * {
+    max-width: 95vw;
+    -webkit-transform: rotate(5deg) translateX(0);
+            transform: rotate(5deg) translateX(0);
+  }
+}
+
 .button.primary {
+  margin: auto;
+  cursor: pointer;
   background-color: #383d3b;
   color: #9ceaef;
   padding: 8px 12px;
@@ -26,8 +69,20 @@ body a {
   padding: 8px 11px;
 }
 
+.button.primary.reverse {
+  color: #383d3b;
+  background-color: #9ceaef;
+}
+
+.button.primary.reverse:hover {
+  background-color: #383d3b;
+  color: #b5ffe9;
+  border: 1px solid #b5ffe9;
+}
+
 nav {
   position: relative;
+  height: 180px;
 }
 
 nav .background {
@@ -94,8 +149,59 @@ nav .nav-text .right-links span:not(.contact) {
   padding: 10px 15px;
 }
 
+nav .nav-text .right-links span:not(.contact):hover {
+  color: gray;
+}
+
+@media screen and (max-width: 600px) {
+  nav .nav-text .right-links span:not(.contact) {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 800px) {
   nav .background img.bottom {
     top: 5px;
+  }
+}
+
+section.intro {
+  text-align: center;
+}
+
+section.intro span {
+  display: block;
+  margin: auto;
+  max-width: 600px;
+  line-height: 1.5;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  section.intro span {
+    font-size: 1.5em;
+    margin: 10px;
+  }
+}
+
+section.call-to-action-1 div span {
+  font-size: 2em;
+  color: #eef0f2;
+}
+
+section.call-to-action-1 div div.button {
+  margin-top: 40px;
+  line-height: 57px;
+  height: 57px;
+  width: 235px;
+  font-size: 2em;
+}
+
+@media screen and (max-width: 600px) {
+  section.call-to-action-1 div {
+    text-align: center;
+  }
+  section.call-to-action-1 div span {
+    font-size: 1.5em;
   }
 }
