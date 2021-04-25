@@ -197,12 +197,14 @@ section.call-to-action-1 {
       color: $text-color;
     }
 
-    div.button {
+    div.button,
+    a.button {
       margin-top: 40px;
       line-height: 57px;
       height: 57px;
       width: 235px;
       font-size: 2em;
+      display: block;
     }
   }
 
@@ -311,6 +313,7 @@ section.call-to-action-1 {
 }
 
 section.projects {
+  display: none;
   .projects-container {
     margin: 55px auto;
 

@@ -202,12 +202,14 @@ section.call-to-action-1 div span {
   color: #eef0f2;
 }
 
-section.call-to-action-1 div div.button {
+section.call-to-action-1 div div.button,
+section.call-to-action-1 div a.button {
   margin-top: 40px;
   line-height: 57px;
   height: 57px;
   width: 235px;
   font-size: 2em;
+  display: block;
 }
 
 @media screen and (max-width: 600px) {
@@ -347,6 +349,10 @@ section.call-to-action-1 div div.button {
   width: 65px;
   height: 14px;
   background-color: #383d3b;
+}
+
+section.projects {
+  display: none;
 }
 
 section.projects .projects-container {
