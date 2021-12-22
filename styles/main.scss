@@ -150,7 +150,7 @@ nav {
       }
 
       @media screen and (max-width: 600px) {
-        span {
+        span, a {
           &:not(.contact) {
             display: none;
           }
